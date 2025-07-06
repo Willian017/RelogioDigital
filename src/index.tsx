@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Icones from './Icones';
 import reportWebVitals from './reportWebVitals';
+import Relogio from './Relogio';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <div className='index-div'>
+      <Relogio />
+      <Icones />
+    </div>
   </React.StrictMode>
 );
 
