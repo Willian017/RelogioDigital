@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BiAlarm, BiBell, BiFullscreen } from "react-icons/bi"
+import { Link } from 'react-router-dom'
 
 export function Clock() {
     const [horaAtual, setHoraAtual] = useState<Date>(new Date());
@@ -47,7 +48,9 @@ export function Clock() {
                 <span className="Segundo">{segundos}</span>
             </div>
             <div className="flex">
-                <BiAlarm className="icons mr-6"/>
+                <Link to={`/stopwatch`}> 
+                   <BiAlarm className="icons mr-6"/> 
+                </Link>
                 <BiBell className="icons mr-6"/>
                 <BiFullscreen onClick={toggleFullScreen} className="icons mr-6"/>
             </div>
